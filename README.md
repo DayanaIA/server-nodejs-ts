@@ -47,5 +47,5 @@ npm run start:dev
 Production
 
 ```bash
-npm start
+npm run start:prod
 ```
