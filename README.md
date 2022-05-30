@@ -1,5 +1,5 @@
 
-# NodeJS course with TypeScript and TypeORM
+# NodeJS server with TypeScript and TypeORM
 
  How to genrate a complex API REST.
 
