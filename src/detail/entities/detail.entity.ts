@@ -7,9 +7,9 @@ import { BaseEntity } from "../../config/base.entity";
 @Entity({ name: 'details' })
 export class DetailEntity extends BaseEntity {
     @Column()
-    quantityProduct!: string
+    quantityProduct!: number
 
-    @Column()
+    @Column({ type: 'decimal', precision: 5, scale: 2 })
     totalPrice!: number
 
     @ManyToOne(() => PurchaseEntity, (purchase) => purchase.details)

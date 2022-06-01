@@ -1,6 +1,6 @@
 import { DetailEntity } from './../../detail/entities/detail.entity';
 import { CategoryEntity } from './../../category/entities/category.entity';
-import { Column, Entity, JoinColumn, ManyToOne, OneToMany } from "typeorm";
+import { Column, Double, Entity, JoinColumn, ManyToOne, OneToMany } from "typeorm";
 import { BaseEntity } from "../../config/base.entity";
 
 @Entity({ name: 'products' })
@@ -11,7 +11,7 @@ export class ProductEntity extends BaseEntity {
     @Column()
     description!: string
 
-    @Column()
+    @Column({ type: 'decimal', precision: 5, scale: 2 })
     price!: number
 
     @ManyToOne(() => CategoryEntity, (category) => category.products)

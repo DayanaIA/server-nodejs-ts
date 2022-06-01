@@ -14,7 +14,7 @@
 Needed dependencies:
 
 ```bash
-npm install class-validator cors dotenv express morgan pg typeorm typeorm-naming-strategies typescript
+npm install class-validator class-transformer cors dotenv express morgan pg typeorm typeorm-naming-strategies typescript
 ```
 
 Development dependencies:

@@ -1,9 +1,13 @@
+import { DetailRouter } from './detail/detail.router';
+import { PurchaseRouter } from './purchase/purchase.router';
+import { ProductRouter } from './product/product.router';
+import { CustomerRouter } from './customer/customer.router';
+import { CategoryRouter } from './category/category.router';
 import { UserRouter } from './user/user.router';
 import express from "express";
 import morgan from "morgan";
 import cors from 'cors';
 import { ConfigServer } from "./config/config";
-import { createConnection, DataSource } from 'typeorm';
 
 class ServerBootstrap extends ConfigServer {
     public app: express.Application = express();
@@ -21,12 +25,13 @@ class ServerBootstrap extends ConfigServer {
     }
     routers(): Array<express.Router> {
         return [
-            new UserRouter().router
+            new UserRouter().router,
+            new CategoryRouter().router,
+            new CustomerRouter().router,
+            new ProductRouter().router,
+            new PurchaseRouter().router,
+            new DetailRouter().router,
         ];
-    }
-
-    async dbConnect(): Promise<DataSource> {
-        return await new DataSource(this.typeORMConfig).initialize();
     }
 
     public listen() {
