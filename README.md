@@ -49,3 +49,17 @@ Production
 ```bash
 npm run start:prod
 ```
+
+## Migrations
+
+Generate migration
+
+```bash
+npm run m:gen -- src/migrations/migrationName
+```
+
+Run migration
+
+```bash
+npm run m:run
+```

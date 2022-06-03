@@ -15,4 +15,13 @@ export class UserDTO extends BaseDTO {
 
     @IsNotEmpty()
     password!: string
+
+    @IsNotEmpty()
+    role!: RoleType
+}
+
+export enum RoleType {
+    USER = 'USER',
+    CUSTOMER = 'CUSTOMER',
+    ADMIN = 'ADMIN'
 }
