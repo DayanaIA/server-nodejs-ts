@@ -1,7 +1,7 @@
-import { CategoryMessage } from './../category.message';
+import { CategoryMessage } from '../category.message';
 import { DeleteResult, UpdateResult } from 'typeorm';
-import { HttpResponse } from './../../shared/response/http.response';
-import { CategoryService } from './../service/category.service';
+import { HttpResponse } from '../../shared/response/http.response';
+import { CategoryService } from '../services/category.service';
 import { Request, Response } from "express";
 
 export class CategoryController {

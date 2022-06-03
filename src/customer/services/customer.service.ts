@@ -1,6 +1,6 @@
-import { CustomerDTO } from './../dto/customer.dto';
-import { CustomerEntity } from './../entities/customer.entity';
-import { BaseService } from './../../config/base.service';
+import { CustomerDTO } from '../dto/customer.dto';
+import { CustomerEntity } from '../entities/customer.entity';
+import { BaseService } from '../../config/base.service';
 import { DeleteResult, UpdateResult } from 'typeorm';
 export class CustomerService extends BaseService<CustomerEntity> {
     constructor() {

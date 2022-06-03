@@ -1,6 +1,6 @@
 import { DeleteResult, UpdateResult } from 'typeorm';
-import { HttpResponse } from './../../shared/response/http.response';
-import { UserService } from './../service/user.service';
+import { HttpResponse } from '../../shared/response/http.response';
+import { UserService } from '../services/user.service';
 import { Request, Response } from "express";
 import { UserMessage } from '../user.message';
 

@@ -1,5 +1,5 @@
 import { DeleteResult, UpdateResult } from 'typeorm';
-import { ProductService } from './../service/product.service';
+import { ProductService } from '../services/product.service';
 import { Request, Response } from "express";
 import { HttpResponse } from '../../shared/response/http.response';
 import { ProductMessage } from '../product.message';

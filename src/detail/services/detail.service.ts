@@ -1,7 +1,7 @@
-import { ProductService } from './../../product/service/product.service';
-import { DetailDTO } from './../dto/detail.dto';
-import { DetailEntity } from './../entities/detail.entity';
-import { BaseService } from './../../config/base.service';
+import { ProductService } from '../../product/services/product.service';
+import { DetailDTO } from '../dto/detail.dto';
+import { DetailEntity } from '../entities/detail.entity';
+import { BaseService } from '../../config/base.service';
 import { DeleteResult, UpdateResult } from 'typeorm';
 export class DetailService extends BaseService<DetailEntity> {
     constructor(

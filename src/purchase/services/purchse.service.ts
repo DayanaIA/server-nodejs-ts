@@ -1,6 +1,6 @@
-import { PurchaseDTO } from './../dto/purchase.dto';
-import { PurchaseEntity } from './../entities/purchase.entity';
-import { BaseService } from './../../config/base.service';
+import { PurchaseDTO } from '../dto/purchase.dto';
+import { PurchaseEntity } from '../entities/purchase.entity';
+import { BaseService } from '../../config/base.service';
 import { DeleteResult, UpdateResult } from 'typeorm';
 export class PurchaseService extends BaseService<PurchaseEntity> {
     constructor() {
@@ -13,7 +13,7 @@ export class PurchaseService extends BaseService<PurchaseEntity> {
     async findPurchaseById(id: string): Promise<PurchaseEntity | null> {
         return (await this.execRepository).findOneBy({ id })
     }
-    async createPurchase(body: PurchaseDTO): Promise<PurchaseEntity> {
+    async createPurchase(body: PurchaseDTO): Promise<PurchaseEntity | undefined> {
         return (await this.execRepository).save(body)
     }
     async deletePurchase(id: string): Promise<DeleteResult> {

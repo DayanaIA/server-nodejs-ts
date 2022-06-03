@@ -1,4 +1,5 @@
 import { IsNotEmpty } from 'class-validator';
+import { CustomerEntity } from '../../customer/entities/customer.entity';
 import { BaseDTO } from './../../config/base.dto';
 export class PurchaseDTO extends BaseDTO {
     @IsNotEmpty()
@@ -6,4 +7,7 @@ export class PurchaseDTO extends BaseDTO {
 
     @IsNotEmpty()
     paymentMethod!: string
+
+    @IsNotEmpty()
+    customer!: CustomerEntity
 }

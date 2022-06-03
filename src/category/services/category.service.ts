@@ -1,6 +1,6 @@
-import { CategoryDTO } from './../dto/category.dto';
-import { CategoryEntity } from './../entities/category.entity';
-import { BaseService } from './../../config/base.service';
+import { CategoryDTO } from '../dto/category.dto';
+import { CategoryEntity } from '../entities/category.entity';
+import { BaseService } from '../../config/base.service';
 import { DeleteResult, UpdateResult } from 'typeorm';
 export class CategoryService extends BaseService<CategoryEntity> {
     constructor() {
